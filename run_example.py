@@ -18,23 +18,23 @@ Followings are some things to be considered:
   database. Just change the last line of function add_model.
 '''
 
-#fisrt, server add the initial model in
+# first, server add the initial model in
 SI.add_model('m0','m0',0.75)
 
-#client start participant and submit their info round 1
+# client start participant and submit their info round 1
 CS.submit_results('u1',100,0.75,'m1')
 CS.submit_results('u2',80,0.6,'m1')
 
-#server finishes training model and add the new model in
+# server finishes training model and add the new model in
 SI.add_model('m0','m1',0.76)
 
-#client start participant and submit their info round 2
+# client start participant and submit their info round 2
 CS.submit_results('u1',100,0.8,'m2')
 CS.submit_results('u3',50,0.8,'m2')
 
-#server finishes training model and add the new model in
+# server finishes training model and add the new model in
 SI.add_model('m1','m2',0.77)
 
-#all models info and corresponding incentive plan/distribution are store
+# all models info and corresponding incentive plan/distribution are store
 # in SI.Models
 print(SI.Models)
