@@ -1,4 +1,5 @@
 import Server_Incentive as SI
+import json
 
 
 #each user when participant in new round the federation training, after test its new
@@ -14,7 +15,6 @@ import Server_Incentive as SI
 
 
 def submit_results(user_name,data_quantity,data_metric_result,new_model_name):
-    j={'test2':1}
-    SI.add(j)
-    SI.add_user(user_name,data_quantity,data_metric_result,new_model_name)
+    j_string = json.dumps((user_name, data_quantity, data_metric_result, new_model_name))
+    SI.add_user(j_string)
     pass

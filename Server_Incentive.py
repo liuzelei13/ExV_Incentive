@@ -1,4 +1,4 @@
-import math,time
+import math,time,json
 from copy import deepcopy
 
 #Followings are variables to be declared before
@@ -90,7 +90,10 @@ def add_model(train_model_name,new_model_name,new_model_metric):
 
 
 #todo entrance for user submit
-def add_user(user_name,data_quantity,data_metric_result,new_model_name):
+def add_user(j_string):
+    #0. convert json string into varialbes
+    user_name, data_quantity, data_metric_result, new_model_name=json.loads(j_string)
+
     #1. calculate score of user submit data, from its testing metric result
     #the 'best metric' represents the new dataset offers new knowledge with most desire
     # differences from previous dataset.
