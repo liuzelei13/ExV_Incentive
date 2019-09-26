@@ -14,7 +14,7 @@ import Server_Incentive as SI
 
 
 def submit_results(user_name,data_quantity,data_metric_result,new_model_name):
-    j={}
+    j={'test':1}
     SI.add(j)
     SI.add_user(user_name,data_quantity,data_metric_result,new_model_name)
     pass
